@@ -11,22 +11,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GFG | First App"
+        android:text="Card code saver"
         android:textColor="#fafafa"
         android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Use your fingerprint to login"
+        android:text="Please authenticate yourself"
         android:textColor="#fafafa"
         android:textSize="18sp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:src="@drawable/icon" />
 
     <TextView
         android:id="@+id/msgtext"
@@ -40,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
-        android:background="#fafafa"
-        android:text="Login" />
+        android:background="#2911F4"
+        android:text="AUTHENTICATE" />
 
 </LinearLayout>
