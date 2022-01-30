@@ -6,11 +6,13 @@ import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ import java.util.concurrent.Executor;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "codeSave";
 
+    public static final String EXTRA_MESSAGE = "com.example.codesave.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +69,10 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 Log.d(TAG, "Authentication Succeeded");
-                // Start new activity
                 Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+                startApp();
+
+
             }
 
         });
@@ -85,8 +90,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 biometricPrompt.authenticate(promptInfo);
-
             }
         });
+
+
+    }
+
+    public void startApp() {
+        Intent intent = new Intent(this, DisplayCode.class);
+        String message = "message info";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
