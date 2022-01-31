@@ -45,15 +45,16 @@ public class DisplayCode extends AppCompatActivity {
         });
 
         final Button createNew = findViewById(R.id.createNew);
-        delAll.setOnClickListener(new View.OnClickListener() {
+        createNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Random r = new Random();
-                String value = String.valueOf(r.nextInt(9999));
-                value = String.format("%04d", Integer.parseInt(value));
-                Code code = new Code(value, "test", 2);
-                codeViewModel.insert(code);
-                Log.d(TAG, "Adding "+value);
+//                Random r = new Random();
+//                String value = String.valueOf(r.nextInt(9999));
+//                value = String.format("%04d", Integer.parseInt(value));
+//                Code code = new Code(value, "test", 2);
+//                codeViewModel.insert(code);
+//                Log.d(TAG, "Adding "+value);
+                Log.d(TAG, "Clicked");
 
 
             }

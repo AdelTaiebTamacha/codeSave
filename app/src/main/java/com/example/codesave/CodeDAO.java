@@ -17,7 +17,7 @@ public interface CodeDAO {
     @Query("DELETE FROM code")
     void deleteAll();
 
-    @Query("SELECT * FROM code ORDER BY value ASC")
+    @Query("SELECT * FROM code ORDER BY position ASC")
     LiveData<List<Code>> getAllCodes();
 
     @Query("SELECT * FROM code WHERE referer == :ref")

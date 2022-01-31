@@ -28,7 +28,7 @@ public class CodeListAdapter extends ListAdapter<Code, CodeViewHolder> {
     @Override
     public void onBindViewHolder(CodeViewHolder holder, int position) {
         Code current = getItem(position);
-        holder.bind(current.getCode());
+        holder.bind(current.getCode(), current.getPosition(), position);
     }
 
 

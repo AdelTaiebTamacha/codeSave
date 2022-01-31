@@ -52,27 +52,17 @@ public abstract class CodeRoomDB extends RoomDatabase {
                 CodeDAO dao = INSTANCE.codeDAO();
                 dao.deleteAll();
 
-
-                Code code = new Code("1111", "test", 1);
-                dao.insert(code);
-                code = new Code("2222", "test", 1);
-                dao.insert(code);
-                code = new Code("3333", "test", 1);
-                dao.insert(code);
-                code = new Code("4444", "test", 1);
-                dao.insert(code);
-                code = new Code("5555", "test", 1);
-                dao.insert(code);
-                code = new Code("6666", "test", 1);
-                dao.insert(code);
-                code = new Code("7777", "test", 1);
-                dao.insert(code);
-                code = new Code("8888", "test", 1);
-                dao.insert(code);
-                code = new Code("9999", "test", 1);
-                dao.insert(code);
-                code = new Code("0000", "test", 1);
-                dao.insert(code);
+                Code code;
+                code = new Code("1111", 0, "test", 1);	dao.insert(code);
+                code = new Code("2222", 1, "test", 1);	dao.insert(code);
+                code = new Code("3333", 2, "test", 1);	dao.insert(code);
+                code = new Code("4444", 3, "test", 1);	dao.insert(code);
+                code = new Code("5555", 4, "test", 1);	dao.insert(code);
+                code = new Code("6666", 5, "test", 1);	dao.insert(code);
+                code = new Code("7777", 6, "test", 1);	dao.insert(code);
+                code = new Code("8888", 7, "test", 1);	dao.insert(code);
+                code = new Code("9999", 8, "test", 1);	dao.insert(code);
+                code = new Code("0000", 9, "test", 1);	dao.insert(code);
 //                LiveData<List<Code>> codes = dao.getAllCodes();
 //                codes.getValue().forEach( c -> {
 //                    Log.d("codeSave", "Code :"+String.valueOf(c.getCode()));
