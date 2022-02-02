@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         authButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                biometricAuthPrompt.authenticate(promptInfo);
+                biometricAuthPrompt.authenticate(promptInfo);
                 startApp();
             }
         });
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                biometricInitPrompt.authenticate(promptInfo);
+                biometricInitPrompt.authenticate(promptInfo);
                 resetApp();
             }
         });
