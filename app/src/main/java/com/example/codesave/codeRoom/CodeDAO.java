@@ -1,4 +1,4 @@
-package com.example.codesave;
+package com.example.codesave.codeRoom;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

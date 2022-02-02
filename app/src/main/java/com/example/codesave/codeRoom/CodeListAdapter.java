@@ -1,17 +1,10 @@
-package com.example.codesave;
+package com.example.codesave.codeRoom;
 
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
-
 
 
 public class CodeListAdapter extends ListAdapter<Code, CodeViewHolder> {
@@ -28,11 +21,11 @@ public class CodeListAdapter extends ListAdapter<Code, CodeViewHolder> {
     @Override
     public void onBindViewHolder(CodeViewHolder holder, int position) {
         Code current = getItem(position);
-        holder.bind(current.getCode(), current.getPosition(), position);
+        holder.bind(current.getCode(), current.getPosition(), current.getColor());
     }
 
 
-    static class CodeDiff extends DiffUtil.ItemCallback<Code> {
+    public static class CodeDiff extends DiffUtil.ItemCallback<Code> {
 
         @Override
         public boolean areItemsTheSame(@NonNull Code oldItem, @NonNull Code newItem) {

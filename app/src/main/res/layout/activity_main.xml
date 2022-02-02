@@ -43,4 +43,16 @@
         android:textSize="30dp"
         android:padding="18dp" />
 
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#2911F4"
+        android:text="RESET"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:padding="10dp" />
+
 </LinearLayout>

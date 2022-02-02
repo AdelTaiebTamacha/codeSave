@@ -1,17 +1,15 @@
-package com.example.codesave;
+package com.example.codesave.codeRoom;
 
 
 import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.LiveData;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -53,20 +51,16 @@ public abstract class CodeRoomDB extends RoomDatabase {
                 dao.deleteAll();
 
                 Code code;
-                code = new Code("1111", 0, "test", 1);	dao.insert(code);
-                code = new Code("2222", 1, "test", 1);	dao.insert(code);
-                code = new Code("3333", 2, "test", 1);	dao.insert(code);
-                code = new Code("4444", 3, "test", 1);	dao.insert(code);
-                code = new Code("5555", 4, "test", 1);	dao.insert(code);
-                code = new Code("6666", 5, "test", 1);	dao.insert(code);
-                code = new Code("7777", 6, "test", 1);	dao.insert(code);
-                code = new Code("8888", 7, "test", 1);	dao.insert(code);
-                code = new Code("9999", 8, "test", 1);	dao.insert(code);
-                code = new Code("0000", 9, "test", 1);	dao.insert(code);
-//                LiveData<List<Code>> codes = dao.getAllCodes();
-//                codes.getValue().forEach( c -> {
-//                    Log.d("codeSave", "Code :"+String.valueOf(c.getCode()));
-//                });
+                code = new Code("1111,1112,1113", 0, "0.000,0.000,0.000", "test", 1);	dao.insert(code);
+                code = new Code("2221,2222,2223", 1, "0.111,0.111,0.111", "test", 1);	dao.insert(code);
+                code = new Code("3331,3332,3333", 2, "0.222,0.222,0.222", "test", 1);	dao.insert(code);
+                code = new Code("4441,4442,4443", 3, "0.333,0.333,0.333", "test", 1);	dao.insert(code);
+                code = new Code("5551,5552,5553", 4, "0.444,0.444,0.444", "test", 1);	dao.insert(code);
+                code = new Code("6661,6662,6663", 5, "0.555,0.555,0.555", "test", 1);	dao.insert(code);
+                code = new Code("7771,7772,7773", 6, "0.666,0.666,0.666", "test", 1);	dao.insert(code);
+                code = new Code("8881,8882,8883", 7, "0.777,0.777,0.777", "test", 1);	dao.insert(code);
+                code = new Code("9991,9992,9993", 8, "0.888,0.888,0.888", "test", 1);	dao.insert(code);
+                code = new Code("0001,0002,0003", 9, "1.000,1.000,1.000", "test", 1);	dao.insert(code);
 
                 Log.d("codeSave", "onCreate: created");
             });

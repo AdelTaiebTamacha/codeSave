@@ -1,5 +1,6 @@
-package com.example.codesave;
+package com.example.codesave.codeRoom;
 
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,21 +24,24 @@ public class CodeViewHolder extends RecyclerView.ViewHolder{
         codeItemView_3 = itemView.findViewById(R.id.recyclerCodeValue_3);
     }
 
-    public void bind(String text, int codePosition, int recyclerPosition) {
-        int rank = codePosition/3;
-        Log.d("codeSave", "code: "+String.valueOf(codePosition) + " recy: " + String.valueOf(recyclerPosition));
+    public void bind(String code, int codePosition, String color) {
+        Log.d("codeSave", "code: "+code);
+        String[] codes = code.split(",");
+        String[] colors = color.split(",");
+        codeItemView_1.setText(codes[0]);
+        codeItemView_2.setText(codes[1]);
+        codeItemView_3.setText(codes[2]);
+        codeItemView_1.setBackgroundColor(string2Color(colors[0]));
+        codeItemView_2.setBackgroundColor(string2Color(colors[1]));
+        codeItemView_3.setBackgroundColor(string2Color(colors[2]));
 
-        switch (codePosition) {
-            case 1: codeItemView_1.setText(text); break;
-            case 2: codeItemView_2.setText(text); break;
-            case 3: codeItemView_3.setText(text); break;
-            default: Log.e("codeSave", "EROOR"); break;
-        }
     }
 
     static CodeViewHolder create(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recyclerview_item, parent, false);
+                .inflate(R.layout.recyclerview_code, parent, false);
         return new CodeViewHolder(view);
     }
+
+    private int string2Color(String v) { return Color.HSVToColor(150,new float[]{Float.parseFloat(v), 1,1});  }
 }
